@@ -24,6 +24,9 @@ function App() {
       const response = await axios.get("/api/images");
       setUploadedImages(response.data);
     } catch (error) {
+      if (!error.response) {
+        setErrorMsg("Server error");
+      }
       console.error(error);
     }
     setLoading(false);
