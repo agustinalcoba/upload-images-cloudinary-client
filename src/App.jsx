@@ -4,7 +4,9 @@ function App() {
   const imgInputRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [uploadedImages, setUploadedImages] = useState({});
-  const [image, setImage] = useState("https://placehold.co/384?text=Click+here");
+  const [image, setImage] = useState(
+    "https://placehold.co/384?text=Click+here"
+  );
   const [name, setName] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
@@ -16,6 +18,7 @@ function App() {
   }, []);
 
   const refreshUploadedImages = async () => {
+    console.log("server:", import.meta.env.VITE_SERVER_URL);
     try {
       setLoading(true);
       const response = await axios.get("/api/images");
