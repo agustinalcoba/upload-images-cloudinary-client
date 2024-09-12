@@ -96,7 +96,7 @@ function App() {
       <p
         className={
           loading
-            ? "absolute top-4 right-0 left-0 mx-auto p-4 border border-green-500 bg-green-200 text-green-500 w-fit rounded-md"
+            ? "fixed top-4 right-0 left-0 mx-auto p-4 border border-green-500 bg-green-200 text-green-500 w-fit rounded-md"
             : "hidden"
         }
       >
